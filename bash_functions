@@ -60,4 +60,4 @@ function chrome-disable-keyring() {
 
 function mcd() { mkdir "$1"; cd "$1"; }
 
-function cls() { cd $1; ls; }
+function cdls() { cd $1; ls; }
