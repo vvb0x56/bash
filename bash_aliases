@@ -6,3 +6,4 @@ alias mkdir='mkdir -pv'
 alias ports='netstat -tulpan'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 alias vmstat='vmstat -w'
+
