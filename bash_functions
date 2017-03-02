@@ -3,9 +3,9 @@ function mkcd() { mkdir "$1"; cd "$1"; }
 
 function cdls() { cd $1; ls; }
 
-function lgrep() {
+function lsgrep() {
     if [ -n "$1" ]; then 
-        ls | grep $1;
+        ls -1 | grep $1;
     fi
 }
 
