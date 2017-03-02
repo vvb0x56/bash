@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+CHROME_DESKTOP_FILE="/usr/share/applications/google-chrome.desktop"
+
 function vertical_tab() {
     echo "--"
 }
@@ -23,17 +25,13 @@ function done_helper() {
     echo "!!!Should be done here."
     echo
 }
-
-    
-CHROME_DESKTOP_FILE="/usr/share/applications/google-chrome.desktop"
-
+   
 # In this place: 
 # sed -i '/Exec=.\+google-chrome.\+%U$/ {/password/! s/%U$/--password-store=basic %U/}'
 # firstly we are trying to except all strings, but such as, has: 
 # "Exec=" +  "google-chrome" + "%U$" except thouse who has "password" 
 # Then we just changing %U -> --password-store=basic %U
      
-
 if [ ! -z "$1" ] && [ -f "$1" ]; then
     CHROME_DESKTOP_FILE="$1"
 fi
