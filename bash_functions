@@ -1,11 +1,14 @@
+# for memory, some IFS magic:
+# IFSBACK=$IFS; IFS=$'\n'; echo "$IFS" | cat -vte; IFS=$IFSBACK;
+
 
 function mkcd() { mkdir "$1"; cd "$1"; }
 
 function cdls() { cd $1; ls; }
 
 function lsgrep() {
-    if [ -n "$1" ]; then 
-        ls -1 | grep $1;
+    if [ -n "$@" ]; then 
+        ls -1 | grep $@;
     fi
 }
 
