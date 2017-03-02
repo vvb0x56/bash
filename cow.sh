@@ -10,7 +10,7 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 if [ -z "$AFORISM" ]; then 
-    AFORISM=`$SHUF -n 1 ~/Documents/aforism.md`
+    AFORISM=`$SHUF_BIN -n 1 ~/Documents/aforism.md`
 fi
 
 cowsay -f $(ls -1 $COWS_DIR | $SHUF_BIN -n 1) "$AFORISM" | lolcat
