@@ -50,13 +50,13 @@ if [ "$OSTYPE" == "darwin18" ]; then
     }
 
     #Function for connect / upload / download  from Factor Group NAS server
-    function nas() { ftp ftp://fg-vvb:QWEsZXC-2017\!@10.199.30.10/fg-vvb/; }
+    function nas() { ftp ftp://fg-vvb:********\!@10.199.30.10/fg-vvb/; }
 
     function put-to-nas() {
         if [ -z "$1" ]; then
             echo "Usage: put-to-nas FILE";
         else
-            curl -T $1 ftp://fg-vvb:QWEsZXC-2017\!@10.199.30.10/fg-vvb/;
+            curl -T $1 ftp://fg-vvb:********\!@10.199.30.10/fg-vvb/;
         fi
     }
     function get-from-nas() {
