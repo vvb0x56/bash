@@ -2,6 +2,7 @@
 
 #for each instance which has a running state
 #  example:
+#    virsh list | grep running | awk '{ print $2 }'
 #    instance-00000055
 #    instance-00000031
 
@@ -55,11 +56,16 @@ for i in $(virsh list | grep running | awk '{ print $2 }');
 	  if [ -n "$ovs_flow" ];
             then
 	      vlan=$(echo $ovs_flow | grep -o -E "dl_vlan=[0-9]+" | grep -o -E "[0-9]+");
-              echo "  vlan=$vlan";
+              echo "  $j vlan=$vlan";
             else
-              echo "  !!! not a vlan ?!";
+              echo "  $j !!! not a vlan ?!";
           fi
 
       done;
     fi
 done;
+
+
+#get tag for the interface
+#sudo ovs-vsctl show   | grep "Port \"...c117540e-ce\"" -A 1 | grep tag | awk '{ print $2 }'
+#sudo ovs-ofctl dump-flows br-int | grep "actions=mod_vlan_vid:4,"
