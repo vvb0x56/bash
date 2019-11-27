@@ -3,6 +3,7 @@
 # make an equal sizes for pdf, $1 source pdf file where we get size
 # $2 dst pdf file which we'll scale to source file, via creating new with appropriate size. 
 
+# we need bc and cpdf installed
 
 OLD_IFS=$IFS;
 IFS=$(echo -ne "\n\b");
