@@ -2,6 +2,14 @@
 
 alias c='clear';
 alias mkdir='mkdir -pv';
+alias ftp='/usr/local/opt/inetutils/libexec/gnubin/ftp'
+alias ip='ls -1 ~ | grep "\.ip$"'
+alias pw='ls -1 ~ | grep "\.pw$"'
+alias protoc='/Users/mac/Downloads/protoc-3.7.1-osx-x86_64/bin/protoc'
+alias mftp='/Users/mac/Trash/mftp/mftp/mftp'
+alias vim='mvim'
+alias vi='mvim'
+alias mysql='/usr/local/Cellar/mysql-client/8.0.18/bin/mysql'
 
 if [ "$(uname)" == "Linux" ]; then 
     alias apt='sudo apt';
