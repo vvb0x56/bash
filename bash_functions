@@ -106,13 +106,13 @@ if [ "$OSTYPE" == "darwin19" ]; then
     }   
     
     #Function for connect / upload / download  from Factor Group NAS server 
-    function nas() { ftp ftp://fg-vvb:QWEsZXC-2017\!@10.199.30.10/fg-vvb/; }
+    function nas() { ftp ftp://xxxxxxxxxxxxxx@10.199.30.10/fg-vvb/; }
 
     function put-to-nas() {
         if [ -z "$1" ]; then
             echo "Usage: put-to-nas FILE";
         else
-            curl -T $1 ftp://fg-vvb:QWEsZXC-2017\!@10.199.30.10/fg-vvb/;
+            curl -T $1 ftp://xxxxxxxxxxxxxx@10.199.30.10/fg-vvb/;
         fi
     }
 
@@ -120,11 +120,7 @@ if [ "$OSTYPE" == "darwin19" ]; then
         if [ -z "$1" ]; then
             echo "Usage: get-from-nas FILE";
         else
-            wget --user=fg-vvb --password='QWEsZXC-2017!' ftp://10.199.30.10/fg-vvb/$1;
+            wget --user=fg-vvb --password='xxxxxxxxxxx' ftp://10.199.30.10/fg-vvb/$1;
         fi
-    }
-
-    function tpf11() {
-        sshpass -p "Pj1Gnx8iBW" sftp vlg-factorgroup@tpf11.megafon.ru:/factorgroup/
     }
 fi
