@@ -1,5 +1,6 @@
 # for memory, some IFS magic:
-# IFSBACK=$IFS; IFS=$'\n'; echo "$IFS" | cat -vte; IFS=$IFSBACK;
+# - IFSBACK=$IFS; IFS=$'\n'; echo "$IFS" | cat -vte; IFS=$IFSBACK;
+# - OLD_IFS=$IFS; IFS=$(echo -ne "\n\b");
 
 
 function mkcd() { mkdir "$1"; cd "$1"; }
