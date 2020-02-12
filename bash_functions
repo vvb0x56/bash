@@ -47,7 +47,7 @@ function mac_vendor {
 
 
 function lsgrep() {
-    if [ -n "$@" ]; then 
+    if [ -n "$@" ]; then
         ls -1 | grep $@;
     fi
 }
@@ -80,7 +80,7 @@ if [ "$OSTYPE" == "darwin19" ]; then
     function te() {
         if [ -n "$1" ] && [ ! -f "$1" ]; then
             touch $1;
-        fi  
+        fi
         open -a TextEdit $1;
     }
 
@@ -114,6 +114,7 @@ if [ "$OSTYPE" == "darwin19" ]; then
             curl -T $1 ftp://fg-vvb:QWEsZXC-2017\!@10.199.30.10/fg-vvb/;
         fi
     }
+
     function get-from-nas() {
         if [ -z "$1" ]; then
             echo "Usage: get-from-nas FILE";

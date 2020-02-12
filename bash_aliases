@@ -9,9 +9,8 @@ alias protoc='/Users/mac/Downloads/protoc-3.7.1-osx-x86_64/bin/protoc'
 alias mftp='/Users/mac/Trash/mftp/mftp/mftp'
 alias vim='mvim'
 alias vi='mvim'
-alias mysql='/usr/local/Cellar/mysql-client/8.0.18/bin/mysql'
 
-if [ "$(uname)" == "Linux" ]; then 
+if [ "$(uname)" == "Linux" ]; then
     alias apt='sudo apt';
     alias ports='netstat -tulpan';
     alias upgrade='sudo apt-get update && sudo apt-get upgrade';

@@ -7,12 +7,12 @@ AFORISM=`/Users/mac/go/src/aforism/main`
 SHUF_BIN="shuf"
 COWS_DIR="/usr/share/cowsay/cows"
 
-if [ "$(uname)" == "Darwin" ]; then 
+if [ "$(uname)" == "Darwin" ]; then
     SHUF_BIN="gshuf"
     COWS_DIR="/usr/local/Cellar/cowsay/3.03/share/cows"
 fi
 
-if [ -z "$AFORISM" ]; then 
+if [ -z "$AFORISM" ]; then
     AFORISM=`$SHUF_BIN -n 1 ~/Documents/aforism.md`
 fi
 
