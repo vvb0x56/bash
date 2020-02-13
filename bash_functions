@@ -61,12 +61,14 @@ function hex2dec() {
 }
 
 function long_filenames() {
+    OLD_IFS=$IFS; IFS=$(echo -ne "\n\b");
     for filename in $(ls -1 $PWD); do 
         len=$(echo $filename | wc -c); 
         if [ $len -gt 40 ]; then 
             echo $filename: $len; 
         fi; 
     done;
+    IFS=$OLD_IFS;
 }
 
 
