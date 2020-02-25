@@ -82,9 +82,11 @@ function long_filenames() {
 
 if [ "$OSTYPE" == "darwin19" ]; then
     function canonical_update_repo() {
+        OLD_DIR=$PWD;
         cd /Users/mac/Trash/Canonical/cpe_fce/fce-templates && git pull;
         cd /Users/mac/Trash/Canonical/cpe_fce/cpe-foundation && git pull; 
         echo $(date) > /Users/mac/Trash/Canonical/cpe_fce/date.txt;
+        cd $OLD_DIR;
     }
 
     #Open gui applications from console
