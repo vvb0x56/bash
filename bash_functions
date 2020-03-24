@@ -71,7 +71,7 @@ function long_filenames() {
     fi
 
     for filename in $(ls -1 $DIR); do 
-        len=$(echo $filename | wc -c); 
+        len=$(echo ${#filename}); 
         if [ $len -gt 40 ]; then 
             echo $filename: $len; 
         fi; 
